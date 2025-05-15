@@ -213,3 +213,64 @@ function ProfitOrLoss(investment, earnings){
 let investment = 1000;
 let earnings = 1200;
 ProfitOrLoss(investment,earnings);
+
+// 13 : Write an electricity bill calculator with tiered pricing
+function electricityBillCalculator(units){
+    if(units <= 100){
+        console.log(`Your electricity bill is ${units * 0.5}`);
+    } else if(units <= 200){
+        console.log(`Your electricity bill is ${100 * 0.5 + (units - 100) * 0.75}`);
+    } else {
+        console.log(`Your electricity bill is ${100 * 0.5 + 100 * 0.75 + (units - 200) * 1.2}`);
+    }
+}
+
+let units = 300;
+electricityBillCalculator(units);
+
+// 14 : Determine the type of triangle (Equilateral, Isosceles, Scalene)
+function typeOfTriangle(sideA,sideB,sideC){
+    if(sideA == sideB && sideB == sideC){
+        console.log(`${sideA},${sideB},${sideC} is an equilateral triangle`);
+    } else if(sideA == sideB || sideB == sideC || sideA == sideC){
+        console.log(`${sideA},${sideB},${sideC} is an isosceles triangle`);
+    } else {
+        console.log(`${sideA},${sideB},${sideC} is a scalene triangle`);
+    }
+}
+
+let sideA = 5;
+let sideB = 5;
+let sideC = 5;
+typeOfTriangle(sideA,sideB,sideC);
+
+// 15 : Map numbers 1-7 to corresponding days of the week
+function dayOfTheWeek(day){
+    switch(day){
+        case 1:
+            console.log(`Day ${day} is Monday`);
+            break;
+        case 2:
+            console.log(`Day ${day} is Tuesday`);
+            break;
+        case 3:
+            console.log(`Day ${day} is Wednesday`);
+            break;
+        case 4:
+            console.log(`Day ${day} is Thursday`);
+            break;
+        case 5:
+            console.log(`Day ${day} is Friday`);
+            break;
+        case 6:
+            console.log(`Day ${day} is Saturday`);
+            break;
+        case 7:
+            console.log(`Day ${day} is Sunday`);
+            break;
+        default:
+            console.log(`Invalid day`);
+    }
+}
+let day = 5;
+dayOfTheWeek(day);
