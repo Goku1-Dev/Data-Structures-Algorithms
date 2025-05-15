@@ -43,18 +43,18 @@ let age = 18;
 votingEligibility(age);
 
 // 04 : Find the greater or lesser numbers
-function GreaterOrLesser(num1,num2){
-    if(num1 > num2){
-        console.log(`${num1} is greater than ${num2}`);
-    } else if(num1 < num2){
-        console.log(`${num1} is less than ${num2}`);
+function GreaterOrLesser(number1,number2){
+    if(number1 > number2){
+        console.log(`${number1} is greater than ${number2}`);
+    } else if(number1 < number2){
+        console.log(`${number1} is less than ${number2}`);
     } else {
-        console.log(`${num1} is equal to ${num2}`);
+        console.log(`${number1} is equal to ${number2}`);
     }
 }
-let num1 = 5;
-let num2 = 10;
-GreaterOrLesser(num1,num2);
+let number1 = 5;
+let number2 = 10;
+GreaterOrLesser(number1,number2);
 
 // 05 : Check if a number is divisible by both 5 and 11
 function divisibleByBoth(num){
@@ -115,3 +115,101 @@ let side2 = 6;
 let side3 =9;
 validTriangle(side1,side2,side3);
 
+// 09 : Identify if a character is a vowel, consonant, digit, or special character
+function charterType(character){
+    if(character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u'){
+        console.log(`${character} is a vowel`);
+    } else if(character >= '0' && character <= '9'){
+        console.log(`${character} is a digit`);
+    } else {
+        console.log(`${character} is a special character`);
+    }
+}
+
+let character = 'a';
+charterType(character);
+
+// 10 : Build a simple calculator (+, -, *, /)
+function calculator(num1,num2,num3){
+    if(num3 == '+'){
+        console.log(`${num1} + ${num2} = ${num1 + num2}`);
+    } else if(num3 == '-'){
+        console.log(`${num1} -${num2} = ${num1 - num2}`);
+    } else if(num3 == '*'){
+        console.log(`${num1 * num2} = ${num1 * num2}`);
+    } else{
+        console.log(`${num1} / ${num2} = ${num1 / num2}`);
+    }
+}
+
+let num1 = 5;
+let num2 = 10;
+let num3 = '+';
+calculator(num1,num2,num3);
+
+// ___________________________________________________________________________________________________
+
+function simpleCalculator(num1, num2) {
+    console.log(
+        '\n- subraction,\n- addition,\n- multiplication,\n- division\n'
+    );
+    let operation = getUserInput();
+
+    function subraction(num1, num2) {
+        console.log(num1 - num2);
+    }
+    function sum(num1, num2) {
+        console.log(num1 + num2);
+    }
+    function division(num1, num2) {
+        console.log(num1 / num2);
+    }
+    function multiplication(num1, num2) {
+        console.log(num1 * num2);
+    }
+
+    if (operation == 'addition') {
+        sum(num1, num2);
+    } else if (operation == 'subraction') {
+        subraction(num1, num2);
+    } else if (operation == 'division') {
+        division(num1, num2);
+    } else if (operation == 'multiplication') {
+        multiplication(num1, num2);
+    }
+}
+
+simpleCalculator(5, 10);
+
+
+// NOTE: Advanced Level
+// 11 : Find the largest of three numbers
+function largestOfThree(arr){
+    let largest = arr[0];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > largest){
+            largest = arr[i];
+        }
+    }
+    console.log(`${largest} is the largest number`);
+}
+
+let arr = [5,10,15];
+largestOfThree(arr);
+
+// 12 : Implement a profit or loss calculator
+function ProfitOrLoss(investment, earnings){
+    investment = Number(investment);
+    earnings = Number(earnings);
+
+    if(earnings > investment){
+        console.log(`You made a profit of ${earnings - investment}`);
+    } else if(earnings < investment){
+        console.log(`You made a loss of ${investment - earnings}`);
+    } else {
+        console.log(`You made no profit or loss`);
+    }
+}
+let investment = 1000;
+let earnings = 1200;
+ProfitOrLoss(investment,earnings);
