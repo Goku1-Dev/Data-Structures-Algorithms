@@ -135,3 +135,78 @@ num1 = 5
 num2 = 10
 num3 = '+'
 calculator(num1,num2,num3)
+
+# 11 : Find the largest of three numbers
+def largest_of_three(arr):
+    largest = arr[0]
+    for i in range(1, len(arr)):
+        if arr[i] > largest:
+            largest = arr[i]
+    print(f"{largest} is the largest number")
+
+arr = [1, 2, 3, 4, 5]
+largest_of_three(arr)
+
+# 12 : Implement a profit or loss calculator
+def ProfitOrLoss(investment, earnings):
+    investment = float(investment)
+    earnings = float(earnings)
+
+    if earnings > investment:
+        print(f"You made a profit of {earnings - investment}")
+    elif earnings < investment:
+        print(f"You made a loss of {investment - earnings}")
+    else:
+        print(f"You made no profit or loss")
+
+investment = 1000
+earnings = 1200
+ProfitOrLoss(investment, earnings)
+
+# 13 : Write an electricity bill calculator with tiered pricing
+def electricityBillCalculator(units):
+    if units <= 100:
+        print(f"Your electricity bill is {units * 0.5}")
+    elif units <= 200:
+        print(f"Your electricity bill is {100 * 0.5 + (units - 100) * 0.75}")
+    else:
+        print(f"Your electricity bill is {100 * 0.5 + 100 * 0.75 + (units - 200) * 1.2}")
+
+units = 300
+electricityBillCalculator(units)
+
+# 14 : Determine the type of triangle (Equilateral, Isosceles, Scalene)
+def typeOfTriangle(sideA,sideB,sideC):
+    if sideA == sideB and sideB == sideC:
+        print(f"{sideA},{sideB},{sideC} is an equilateral triangle")
+    elif sideA == sideB or sideB == sideC or sideA == sideC:
+        print(f"{sideA},{sideB},{sideC} is an isosceles triangle")
+    else:
+        print(f"{sideA},{sideB},{sideC} is a scalene triangle")
+
+sideA = 3
+sideB = 4
+sideC = 5
+typeOfTriangle(sideA,sideB,sideC)
+
+# 15 : Map numbers 1-7 to corresponding days of the week
+def dayOfTheWeek(day):
+    if day == 1:
+        print(f"Day {day} is Monday")
+    elif day == 2:
+        print(f"Day {day} is Tuesday")
+    elif day == 3:
+        print(f"Day {day} is Wednesday")
+    elif day == 4:
+        print(f"Day {day} is Thursday")
+    elif day == 5:
+        print(f"Day {day} is Friday")
+    elif day == 6:
+        print(f"Day {day} is Saturday")
+    elif day == 7:
+        print(f"Day {day} is Sunday")
+    else:
+        print(f"Invalid day")
+
+day = 1
+dayOfTheWeek(day)
